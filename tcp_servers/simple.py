@@ -13,7 +13,7 @@ while True:
     try:
         request = client_socket.recv(1024)
         client_socket.send(request.upper())
-        print '{} REQUESTED {}'.format(client_socket.getpeername(), request)
+        print '{} : {}'.format(client_socket.getpeername(), request)
         client_socket.close()
     except:
         pass

@@ -29,7 +29,7 @@ while True:
         request = client_socket.recv(1024)
         filename = get_filename(request)
         client_socket.send(get_response(filename))
-        print '{} REQUESTED {}'.format(client_socket.getpeername(), filename)
+        print '{} : {}'.format(client_socket.getpeername(), filename)
         client_socket.close()
     except:
         pass
